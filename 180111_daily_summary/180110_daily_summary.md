@@ -69,7 +69,7 @@ Ex) 1) HTTP, 2) FTP, 3) SMTP, 4) TCP, 5) IP, 6) DNS, Telnet, DHCP, TFTP
 ## 용어 설명   
 1 ) **HTTP (HyperText Transfer Protocol)** : www상에서 정보를 주고 받는 프로토콜로 TCP, UDP를 활용   
 2 ) **FTP (File Transfer Protocol)** : 서버와 클라이언트 사이에 파일을 전송하기 위한 프로토콜   
--> 보안에 매우 취약하며 현재는 보안이 강화된 FTPS, SFTP, SSH 등을 사용
+-> 보안에 매우 취약하며 현재는 보안이 강화된 FTPS, SFTP, SSH 등을 사용   
 3 ) **SMTP (Simple Mail Transfer Protocol)** : Internet에서 메일을 보내기 위한 프로토콜   
 4 ) **TCP (Transmission Control Protocol)** : 전송제어 프로토콜로 근거리 통신망이나 인트라넷, 인터넷에 연결된 컴퓨터에서 안정적으로, 순서대로, 에러없이 교환할 수 있게함   
 5 ) **IP (Internet Protocol)** : 호스트의 주소지정과 패킷 분할 및 조립을 담당하며   

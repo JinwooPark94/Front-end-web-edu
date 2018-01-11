@@ -44,7 +44,7 @@ LAN -> MAN -> WAN -> WLAN
 ![7-layer-model.jpg](./7-layer-model.jpg)
 
 ### **네트워크 지원계층 (Layer 1~3)**
->한 장치에서 다른 장치로 데이터를 이동할 때 전기적인 규격, 물리적인 연결, 물리 주소, 전송 시간과 신뢰도 등 물리적인 면을 처리 함   
+한 장치에서 다른 장치로 데이터를 이동할 때 전기적인 규격, 물리적인 연결, 물리 주소, 전송 시간과 신뢰도 등 물리적인 면을 처리 함   
 Ex) ICMP, ARP, RARP, IP
 1. **Physical layer (물리층)** : 네트워크 데이터가 전송될 때 사용되는 물리적 매개체로 물리적인 장치와 인터페이스가 전송을 위해 필요한 기능 및 처리 절차를 규정
 
@@ -53,20 +53,21 @@ Ex) ICMP, ARP, RARP, IP
 3. **Network Layer (네트워크층)** : 패킷을 발신지로부터 여러 네트워크를 통해 목적지까지 전달함
 
 ### **전송층 (Layer 4)**
->종단대 종단간 신뢰 할 수 있는 데이터 전송 보장   
-Ex) 4)TCP, 8)UDP   
+종단대 종단간 신뢰 할 수 있는 데이터 전송 보장   
+Ex) 4) TCP, 8) UDP   
 
 4. **Transport Layer (전송층)** : 지점과 지점 간의 오류가 없음을 보장하여 아래 계층(Layer 1, 2, 3)의 신뢰성 있는 데이터를 전송
 
 ### **사용자 지원계층 (Layer 5~7)**
->서로 상관 없는 소프트웨어 시스템 사이의 상호 연동을 가능하게 함   
-Ex) 1)HTTP, 2)FTP, 3)SMTP, 4)TCP, 5)IP, 6)DNS, Telnet, DHCP, TFTP 
+서로 상관 없는 소프트웨어 시스템 사이의 상호 연동을 가능하게 함   
+Ex) 1) HTTP, 2) FTP, 3) SMTP, 4) TCP, 5) IP, 6) DNS, Telnet, DHCP, TFTP   
+
 5. **Session Layer (세션층)** :  세션 연결의 설정과 해제, 세션 메시지 전송 등의 기능을 함   
 6. **Presentation Layer (표현층)** : 응용 계층으로 부터 전송 받거나 전달되는 데이터의 인코딩과 디코딩을 함   
 7. **Application Layer (응용층)** : 네트워크 활동들에 대한 모든 기본적인 인터페이스 제공 
 
 ## 용어 설명   
->1 ) **HTTP (HyperText Transfer Protocol)** : www상에서 정보를 주고 받는 프로토콜로 TCP, UDP를 활용   
+1 ) **HTTP (HyperText Transfer Protocol)** : www상에서 정보를 주고 받는 프로토콜로 TCP, UDP를 활용   
 2 ) **FTP (File Transfer Protocol)** : 서버와 클라이언트 사이에 파일을 전송하기 위한 프로토콜   
 -> 보안에 매우 취약하며 현재는 보안이 강화된 FTPS, SFTP, SSH 등을 사용
 3 ) **SMTP (Simple Mail Transfer Protocol)** : Internet에서 메일을 보내기 위한 프로토콜   

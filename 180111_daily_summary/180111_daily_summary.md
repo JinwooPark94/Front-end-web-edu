@@ -73,7 +73,7 @@ Ex) 1) HTTP, 2) FTP, 3) SMTP, 4) TCP, 5) IP, 6) DNS, Telnet, DHCP, TFTP
 3 ) **SMTP (Simple Mail Transfer Protocol)** : Internet에서 메일을 보내기 위한 프로토콜   
 4 ) **TCP (Transmission Control Protocol)** : 전송제어 프로토콜로 근거리 통신망이나 인트라넷, 인터넷에 연결된 컴퓨터에서 안정적으로, 순서대로, 에러없이 교환할 수 있게함   
 5 ) **IP (Internet Protocol)** : 호스트의 주소지정과 패킷 분할 및 조립을 담당하며   
-종류로는 IPv4(32bit), IPv6(128bit)가 존재함
+종류로는 IPv4(32bit), IPv6(128bit)가 존재함   
 6 ) **DNS (Domain Name System)** : 복잡한 Ip adress를 사람이 판별하기 쉬운 url로 매핑하는 시스템   
 7 ) **서브넷 마스크 (Subnetmask)** : 커다란 네트워크를 효율적으로 분배하여 사용하기 위한 방법   
 8 ) **UDP (User Datagram Protocol)** : 데이터그램을 전송하기 위한 프로토콜로 빠른 속도를 자랑하지만 단순하여 신뢰성이 낮고 데이터그램 도착 순서가 바뀌거나, 중복되거나, 통보 없이 누락되기도 함   

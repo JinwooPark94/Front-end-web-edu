@@ -12,10 +12,7 @@
 1. 스위치 허브
 1. 라우터
 1. 네트워크 카드
-
-### **네트워크의 구분**
-LAN -> MAN -> WAN -> WLAN   
-
+ 
 #### **유선 : LAN, MAN, WAN**
 >LAN (Local Area Network) : 근거리 통신망으로 학교,회사 등 가까운 지역의 좁은 범위   
 >MAN (Metropolitan Area Network) : 도시권 통신망으로 도시나 지역 사회의 범위   

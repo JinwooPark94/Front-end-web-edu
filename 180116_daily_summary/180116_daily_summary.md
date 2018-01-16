@@ -43,26 +43,26 @@ css는 엔진 성능 차이
   <pre><code>*{
   margin:0;
   padding:0;
-}</code></pre>
+  }</code></pre>
 - 요소 선택자 : HTML 요소를 선택하는 방법으로 "h1", "p", "div"를 선택자로 선언   
   <pre><code>div{
   border:1px solid #e0e0e0;
-}</code></pre>
+  }</code></pre>
 - 클래스 선택자 : HTML 요소의 class 속성 값을 참조하여 설정하는 방법
   <pre><code>.header-div{
   font-size:12px;
-}</code></pre>
+  }</code></pre>
 - 아이디 선택자 : HTML 요소의 id 속성 값을 참조하여 선택하는 방법
   <pre><code>#main{
   background-color:#e0e0e0;
-}</code></pre>
+  }</code></pre>
 - 가상 클래스 선택자 : 요소의 상태나 상황에 따라 선택하는 방법으로, 링크의 경우 방문하기 전, 방문한 후, 링크 위에 마우스를 올려놓거나 포커스 시 등의 상황을 선택하여 스타일 지정이 가능
 ![css_img6.png](./css_img6.png)
 ![css_img6.png](./css_img7.png)
   <pre><code>.a:link{
   color:#red;
-}</code></pre>
+  }</code></pre>
 - 하위 선택자 : 선택자와 선택자를 공란으로 선언하며, 선행 선택자의 하위 요소 중 후행 선택자에 해당하는 요소를 선택하는 방법
   <pre><code>#main div{
   border:3px solid black
-}</code></pre>
+  }</code></pre>

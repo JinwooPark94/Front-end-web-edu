@@ -5,10 +5,9 @@
 - 주로 긴 인용문에 사용되며 출처 표시
 - block 형식
 
-
-	<blockquote cite="(출처 url)">
-  	  <p>blockquote 테스트</p>
-	</blockquote>
+        <blockquote cite="(출처 url)">
+          <p>blockquote 테스트</p>
+    	</blockquote>
 
 > cite 속성을 이용하여 출처 표시 가능
 
@@ -18,9 +17,9 @@
 - 자동으로 태그안에 before, after content로 " " 큰 따옴표가 넣어짐
 
 
-	<q cite="(출처 url)">
-  	  <p>q 테스트</p>
-    </q>
+	    <q cite="(출처 url)">
+          <p>q 테스트</p>
+        </q>
    
 > cite 속성을 이용하여 출처 표시 가능
  
@@ -30,13 +29,13 @@
 - 주소, 연락처, 메일, 저작권 등 정보를 위한 태그
 - address안에 글꼴은 defalut 값으로 이탤릭체
 
-
-	<address>
-      <span>서울시 서초구</span>
-      <span>전화: <a href="tel:02-1234-5678">02-1234-5678</a></span>
-      <span>E-MAIL: <a href="mailto:wlsdntus2@naver.com">wlsdntus2@naver.com</a></span>
-      <span>Copyright by JinwooPark</span>
-    </address>
+        <address>
+          <span>서울시 서초구</span>
+          <span>전화: <a href="tel:02-1234-5678">02-1234-5678</a></span>
+          <span>E-MAIL: <a href="mailto:wlsdntus2@naver.com">wlsdntus2@naver.com</a></span>
+          <span>Copyright by JinwooPark</span>
+        </address>
+      
 
 > **위의 a 태그 주소에서 tel과 mailto를 사용하면 모바일 환경에서 클릭시 자동으로 전화를 바로 거는 기능이나 메일 주소로 바로 연결하여 메일 전송이 가능**
 

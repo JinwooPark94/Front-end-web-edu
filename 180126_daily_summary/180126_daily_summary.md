@@ -70,22 +70,20 @@
 ## 해결방안
 ### 1. srcset, sizes 속성
 - 화면 크기에 맞춰 적절한 용량 이미지를 불러옴
-- 고밀집도 디바이스에 대응가능
+- 고밀집도 디바이스에 대응가능   
 
-
-	<img src="small.jpg" srcset="large.jpg 1024w, medium.jpg 640w, small.jpg 320w" sizes="(min-width: 36em) 33.3vw, 100vw" alt="A rad wolf">
+	  <img src="small.jpg" srcset="large.jpg 1024w, medium.jpg 640w, small.jpg 320w" sizes="(min-width: 36em) 33.3vw, 100vw" alt="A rad wolf">
 
 
 ### 2. picture 엘리먼트
 - 다양한 디바이스에 맞는 이미지를 불러옴
 - 고밀집도 디바이스에 대응가능
 
-
-	<picture>
-    	<source media="(min-width: 40em)" srcset="big.jpg 1x, big-hd.jpg 2x">
+	  <picture>
+        <source media="(min-width: 40em)" srcset="big.jpg 1x, big-hd.jpg 2x">
         <source srcset="small.jpg 1x, small-hd.jpg 2x">
         <img src="fallback.jpg" alt="">
-    </picture>
+      </picture>
 
 ## 책 추천
 [도서] 만들면서 배우는 모던 웹사이트 디자인 : 웹 디자인을 위한 모던 테크닉 새창

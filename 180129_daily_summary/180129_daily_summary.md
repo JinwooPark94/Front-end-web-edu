@@ -96,4 +96,45 @@ Script가 컴퓨터에 의해 단계별로 수행될 명령들
     
 예 ) 키워드 z라는 이름으로 변수를 생성하고 x,y라는 값을 가져와서 더한 다음 z에 넣어라
 
+## 표현식 (Expression)
+하나의 값으로 평가될 수 있는 구문
+> 구문은 표현식이 될 수 없음
+
+	10 * 6             // 60
+    'Hi' + ' ' + 'bro' // 'Hi bro'
+
+## 변수 (Variable)
+변수는 위치를 기억하는 저장소이며 값을 저장, 참조하기 위해 사용
+
+	var number;  // 변수의 선언과 초기화
+    number = 6;
+
+예) number로 변수를 선언하고 변수 number에 6을 할당해라
+
+## 값 (Value)
+여기서의 값을 보통 리터널이라 부름
+> 리터널이란 : 변수 또는 상수에 저장되는 값 자체를 의미
+
+	2000 // literal : Number
+    'Hi Hello' // literal : String
+    { name: 'Park', age: '25' } // literal : Object
+    ['Spring','Summer']; // literal : Array
+    
+# 키워드
+수행할 동작을 규정한 것(명령어)
+
+# 주석 (Comment)
+작성한 코드의 의미를 설명함
+> 주석은 없는 것이 최고
+
+변수명 프로퍼티명을 사용할 때 의미를 담아서 쓰는 것이 좋음
+
+	//Bad
+    //변수 x에 정수 5를 할당함
+    var x = 5;
+    
+    //good
+    var page = 10;
+
+
 참고 : http://poiemaweb.com 사이트

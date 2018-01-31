@@ -228,21 +228,22 @@
 
 ## **Sass 단점**
 - Ruby로 만들어짐 
-  > 단점을 보완할 Node기반의 Sass가 나옴
+
+  > 단점을 보완할 Node기반의 SCSS가 나옴
 
 ## **Scss 란?**
 2010년 5월 sass 버전 업데이트로 기존 Sass 문법을 줄이고 CSS문법을 살린 SCSS가 나옴
 - CSS가 지원하는 모든 문법과 기능을 사용 가능
 
-### **Sass에 기존 CSS에 없던 추가된 기능**
+## **Sass에 기존 CSS에 없던 추가된 기능**
 - 변수, 조건문, 반복문 기능
 - import 기능
 - Mixin 기능
 - Extend / Inheritance 기능
 - Nesting 기능
 
-### **SCSS 특징과 Sass 특징 비교**
-**SCSS**
+## **SCSS 특징과 Sass 특징 비교**
+### **SCSS**
 - 구문은 CSS와 유사함
 - 중괄호 사용 -> {}
 - 세미콜론 사용 -> ;
@@ -258,7 +259,7 @@
         background-color: $color;
       }
 
-**Sass**
+### **Sass**
 - 구문은 Ruby와 유사함
 - 중괄호 사용 X
 - 엄격한 들여쓰기 X

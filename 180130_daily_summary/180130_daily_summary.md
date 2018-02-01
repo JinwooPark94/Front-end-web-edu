@@ -26,8 +26,8 @@
 예)
 
 	var num;  // 1
-    num = 4;  // 2
-    
+	num = 4;  // 2
+
 1. 변수명 num이라는 변수를 생성하는데 값을 정의하지 않았으므로 undifined에 해당하는 메모리에 공간을 확보하고 위치를 기억
 2. 4라는 값에 대한 메모리를 새로 확보하고 num이 가르키던 undifined에서 4로 가르킴
 > 여기서 undifined는 가르키는 포인터가 없으므로 Garbage Collector가 자동적으로 메모리에 확보되있던 공간을 삭제해줌
@@ -40,19 +40,19 @@
 예) 
 
 	var user1 = {
-      name: 'Park',
-      number: '13'
-      }
-    }; // 1
-    
-    
+	  name: 'Park',
+	  number: '13'
+	  }
+	}; // 1
+
+
     var user2 = user1; // 2
 
     user2.name = 'John'; // 3
 
     console.log(user1.name); // 4
     console.log(user2.name); // 4
-    
+
 1. 객체 user1을 생성하고 user1안에 있는 값들을 메모리안에 넣음
 2. user1의 값을 user2에 넣는게 아니라 user2는 user1을 포인터로 가르킴
 3. user2.name에 'John'이라는 값을 넣으면 기존의 기본자료형 방식과는 다르게 따로 공간을 생성하지 않고 user1에 있던 공간에서 덮어쓰기 형식으로 수정함
@@ -85,9 +85,9 @@
 ## **중복 선언**
 - 변수는 중복 선언이 가능
 
-	var score = 1;
+  var score = 1;
     console.log(score); // 1
-    
+
     var score = 100;
     console.log(score); // 100
 
@@ -122,13 +122,69 @@
 # **단축 평가**
 
 	function foo (str) {
-      str = str || '';
-      // do somethig with str
-      console.log(str.length);
+	  str = str || '';
+	  // do somethig with str
+	  console.log(str.length);
   	}
 
 > 매개변수 초기화
 
 # **!!**
 피연산자를 boolean값으로 변환하는 것
+
+
+
+### 암묵적 강제 형 변환
+
+Javascript는 문맥을 고려하여 자료형을 암묵적으로 강제 변환 함
+
+```javascript
+console.log ('1' > 0);     // true
+
+// 위의 내용은 문자열 1과 정수 0을 비교하면 문자열 1을 암묵 적 강제형 변환으로 숫자 1로 변환하여 숫자 1과 숫자 0을 비교하여 숫자 1과 숫자 0의 값보다 크므로 true라는 값을 출력 
+```
+
+> 하지만 암묵적 강제 형 변환은 안좋은 방법 명확하게 자료형을 비교하는 것이 좋음
+
+
+
+### 암묵적 강제 형 변환의 과정
+
+뒤에있는 값을 컨버젼을 숫자형으로 하게 되는데 비트 연산을 하여 
+
+"+" 단항 연산자는 대부분의 값을 숫자형으로 변환 가능
+
+```javascript
+console.log(+10);
+// 10이라는 값을 양수로 바꾸어 줌 (양수화)
+```
+
+> undifined와 NaN은 정수형으로 못 바꿈
+
+
+
+### String -> number로 바꾸는 방법
+
+```javascript
+val = +val; // "+": 단항 연산자(unary operator)
+// val = val * 1;
+// val = parseInt(val);
+// val = Number(val);
+console.log(typeof val); // number
+```
+
+> 1번째와 3번째를 추천
+
+### Number -> String으로 바꾸는 방법
+
+```javascript
+val = val + '';
+// val = String(val);
+// val = val.toString();
+console.log(typeof val); // string
+```
+
+> 1번째와 3번째를 추천
+
+
 

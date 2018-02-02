@@ -339,9 +339,9 @@ console.log(Person.prototype.getName());
 
    **순서**
 
-   1. 빈 객체를 만듬
-   2. this를 빈 객체를 가리킴
-   3. 마지막에 자신의 프로토타입 객체로 설정
+   - 빈 객체를 만듬
+   - this를 빈 객체를 가리킴
+   - 마지막에 자신의 프로토타입 객체로 설정
 
 2. this를 통한 property 생성
 

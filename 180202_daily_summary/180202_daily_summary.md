@@ -8,9 +8,9 @@
 
 ```javascript
 function multiply(x, y) {
-  
+
   // 방어코드 넣기
-  
+
   console.log(arguments);
   return x * y;
 }
@@ -50,7 +50,7 @@ console.log(person.length); // 3
 
 ## name 속성(property)
 
-기명 함수 또는 익명 함수에 사용되며 
+기명 함수 또는 익명 함수에 사용되며
 
 ```javascript
 function person( name, gender, country ){}
@@ -106,12 +106,12 @@ console.log(phone.__proto__.constructor === phone.prototype.constructor); // fal
 ```javascript
 // 기명 즉시호출함수
 (function nameFunction() {
-  
+
 }());
 
 // 익명방법
 (function () {
-  
+
 }());
 ```
 
@@ -139,14 +139,14 @@ function parent() {
 
 ![참고 : http://poiemaweb.com/js-function - callback function](http://poiemaweb.com/img/callback.png)
 
-특정한 이벤트가 발생할때 호출되는 함수 
+특정한 이벤트가 발생할때 호출되는 함수
 
 > 나중에 호출하는 함수
 
 ```javascript
 function laterCall() {
   var name = 'Park';
-  
+
   // 0.03초 후에 함수 실행
   setTimeout(function () {
     console.log('My name is ' + name);
@@ -179,7 +179,7 @@ var restaurant = {
 console.log(restaurant.hasOwnProperty('name')); // 값은 : true
 ```
 
-restaurant라는 객체에는 hasOwnProperty라는 정보가 없지만 값은 true가 출력이 된다. 그 이유는 만약 선택한 객체에 값이 없으면 그 다음 부모 객체로 찾아가고 또 없으면 이 과정을 반복하여 결국 Object 객체까지 가서 없으면 error값을 반환 한다. 
+restaurant라는 객체에는 hasOwnProperty라는 정보가 없지만 값은 true가 출력이 된다. 그 이유는 만약 선택한 객체에 값이 없으면 그 다음 부모 객체로 찾아가고 또 없으면 이 과정을 반복하여 결국 Object 객체까지 가서 없으면 error값을 반환 한다.
 
 ## constructor 프로퍼티
 
@@ -221,7 +221,7 @@ Property나 메소드로 접근하려고 할 때 해당 객체에 Property 값 �
 
 ### 생성자 방식 객체의 Prototype 체인
 
-함수를 생성하는 과정에서 Function() 생성자 함수를 통해 함수가 생성되는데 모든 함수의 Prototype 객체는 `Function.prototype`이고 또한 생성자 함수도 함수 객체이므로 `Function.prototype` 객체이다. 
+함수를 생성하는 과정에서 Function() 생성자 함수를 통해 함수가 생성되는데 모든 함수의 Prototype 객체는 `Function.prototype`이고 또한 생성자 함수도 함수 객체이므로 `Function.prototype` 객체이다.
 
 ![참고 : http://poiemaweb.com/js-function - constructor function prototype chaining](http://poiemaweb.com/img/constructor_function_prototype_chaining.png)
 
@@ -288,7 +288,7 @@ console.dir(strObj);
 
 - 함수 또는 메소드 안에 있는 것은 모두 전역객체
 
-  > 단, 2가지를 제외함 
+  > 단, 2가지를 제외함
 
   - 메소드 내에 있는 경우
   - 생성자 함수에 있는 경우
@@ -362,3 +362,5 @@ console.log(me.name);
 ```
 
 ![참고 : http://poiemaweb.com/js-function - constructor](http://poiemaweb.com/img/constructor.png)
+
+### 참고 : http://poiemaweb.com

@@ -229,3 +229,7 @@ var num = numObj.valueOf();
 console.log(num);           // 10
 console.log(typeof num);    // number
 ```
+
+
+
+### 참고 : http://poiemaweb.com

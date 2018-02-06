@@ -131,3 +131,6 @@ var min = Math.min.apply(null, arr); // 1
 // ES6
 var min = Math.min(...arr); // 1
 ```
+
+
+### 참고 : http://poiemaweb.com

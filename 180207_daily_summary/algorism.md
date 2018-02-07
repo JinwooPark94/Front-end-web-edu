@@ -10,25 +10,25 @@ toWeirdCase함수는 문자열 s를 매개변수로 입력받는다. 문자열 s
 function toWeirdCase(s) {
   var objStr = s.toUpperCase().split('');
 
-  // 변수 UpperArea의 값이 0이면 대문자, 1이면 소문자
-  var UpperArea = 0;
+  // 변수 upperArea의 값이 0이면 대문자, 1이면 소문자
+  var upperArea = 0;
 
   for (var i = 0; i < objStr.length; i++ ){
 
-    // 값이 빈 공백이라면 UpperArea를 0으로 수정
+    // 값이 빈 공백이라면 upperArea를 0으로 수정
     if (objStr[i] === ' '){
-      UpperArea = 0;
+      upperArea = 0;
       continue;
     }
 
     // 대문자 구간
-    if (UpperArea === 0){
-      UpperArea++;
+    if (upperArea === 0){
+      upperArea++;
     }
     // 소문자 구간
     else {
       objStr[i] = objStr[i].toLowerCase();
-      UpperArea--;
+      upperArea--;
     }
 
   }

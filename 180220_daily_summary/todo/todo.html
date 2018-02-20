@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Todos V0</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <input id="input-todo" placeholder="What needs to be done?" autofocus>
+  <ul id="todo-list"></ul>
+  <script>
+    var todosData = [ { id : 0 , value : 'HTML'} , { id: 1 , value: 'CSS' }, { id: 2, value: 'Javascript' }];
+
+    var elem = document.querySelector('#input-todo');
+    var ul = document.querySelector('#todo-list');
+    var idValue = todosData.length;
+
+    function updateData() {
+      if (todosData) {
+        todosData.forEach(function (item) {
+          ul.innerHTML += '<li id=' + item.id + '>' + item.value + '</li>';
+        });
+      }
+    }
+
+    function addData(e){
+      if (elem.value) {
+        if (e.keyCode === 13) {
+          var newData = { id: idValue, value: elem.value };
+          todosData.push(newData);
+
+          ul.innerHTML = '';
+          updateData();
+          elem.value = '';
+
+          idValue++;
+        }
+      }
+    }
+
+    function deleteData(e) {
+      if (e.target.nodeName === 'LI') {
+        deleteId = Number.parseInt(e.target.id);
+        todosData = todosData.filter(function (todo) {
+          return todo.id !== deleteId
+        });
+
+        //delete todosData[deleteId];
+        //todosData.splice(deleteId, 1);
+
+        ul.innerHTML = '';
+        updateData();
+      }
+    }
+
+    window.addEventListener('load', function (e) {
+      updateData();
+    });
+
+    elem.addEventListener('keyup', function (e) {
+      addData(e);
+    });
+
+    ul.addEventListener('click', function (e) {
+      deleteData(e);
+    });
+  </script>
+</body>
+</html>

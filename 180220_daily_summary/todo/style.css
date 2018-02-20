@@ -1,0 +1,28 @@
+body {
+    width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+input {
+    padding-top: 30px;
+    width: 500px;
+    height: 60px;
+    font-size: 40px;
+    border: 0;
+}
+
+input:focus {
+    outline:none;
+}
+
+li {
+    text-align: left;
+    font-size: 40px;
+    list-style: none;
+    margin: 0;
+}
+
+li:hover {
+    text-decoration: line-through;
+}

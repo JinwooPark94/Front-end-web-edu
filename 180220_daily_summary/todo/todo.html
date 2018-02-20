@@ -13,7 +13,9 @@
   <input id="input-todo" placeholder="What needs to be done?" autofocus>
   <ul id="todo-list"></ul>
   <script>
-    var todosData = [ { id : 0 , value : 'HTML'} , { id: 1 , value: 'CSS' }, { id: 2, value: 'Javascript' }];
+    var todosData = [ { id: 0, value : 'HTML', completed: true} ,
+                      { id: 1, value: 'CSS', completed: false},
+                      { id: 2, value: 'Javascript', conpleted : true }];
 
     var elem = document.querySelector('#input-todo');
     var ul = document.querySelector('#todo-list');
@@ -30,7 +32,7 @@
     function addData(e){
       if (elem.value) {
         if (e.keyCode === 13) {
-          var newData = { id: idValue, value: elem.value };
+          var newData = { id: idValue, value: elem.value, completed: false };
           todosData.push(newData);
 
           ul.innerHTML = '';

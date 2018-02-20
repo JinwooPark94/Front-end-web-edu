@@ -15,7 +15,7 @@
   <script>
     var todosData = [ { id: 0, value : 'HTML', completed: true} ,
                       { id: 1, value: 'CSS', completed: false},
-                      { id: 2, value: 'Javascript', conpleted : true }];
+                      { id: 2, value: 'Javascript', completed : true }];
 
     var elem = document.querySelector('#input-todo');
     var ul = document.querySelector('#todo-list');
@@ -24,9 +24,22 @@
     function updateData() {
       if (todosData) {
         todosData.forEach(function (item) {
-          ul.innerHTML += '<li id=' + item.id + '>' + item.value + '</li>';
+          var checked = (item.completed === true) ? 'checked' : '';
+          ul.innerHTML += '<li id=' + item.id + '><input id="chk_'+item.id+'" class="chk_input" type="checkbox" '+checked+'>' + item.value + '</li>';
         });
       }
+    }
+
+    function checkboxUpd(e){
+      var chkId = e.target.id;
+      chkId = chkId.substring(4, e.target.id.length) * 1;
+      console.log(typeof(chkId));
+
+      todosData.forEach(function (item){
+        if(item.id === chkId) item.completed = !item.completed
+      });
+
+      console.log(todosData);
     }
 
     function addData(e){
@@ -69,6 +82,10 @@
 
     ul.addEventListener('click', function (e) {
       deleteData(e);
+    });
+
+    ul.addEventListener('change', function (e) {
+      checkboxUpd(e);
     });
   </script>
 </body>

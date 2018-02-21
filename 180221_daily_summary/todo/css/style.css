@@ -14,6 +14,7 @@ body {
   width: 500px;
   margin: 0 auto;
   text-align: center;
+  background-image: url("https://farm3.staticflickr.com/2817/33968464326_a6f9cbc754_k.jpg");
 }
 
 section {
@@ -21,11 +22,20 @@ section {
     margin: 20% 0;
     border: 1px solid #e0e0e0;
     border-radius: 5px;
+    background:#fff;
 }
 
 section h1 {
     font-size:2.5em;
     margin: 10px 0;
+}
+
+section a {
+    color:#000;
+    text-decoration: none;
+    padding: 3px 5px;
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
 }
 
 section p {
@@ -63,6 +73,10 @@ li {
     padding:10px 0;
     border-bottom :1px solid #e0e0e0;
     position: relative;
+}
+
+.checked{
+    text-decoration:line-through;
 }
 
 li i::after{

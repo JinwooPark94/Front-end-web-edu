@@ -13,10 +13,13 @@
   <section>
     <h1>Todolist</h1>
     <div>
+      <a href="#" id="all-complt">전체선택 및 해제</a>
       <p id="count-complt"></p>
     </div>
     <ul id="todo-list"></ul>
-    <input id="input-todo" placeholder="What needs to be done?" autofocus>
+    <form action="#">
+      <input type="text" id="input-todo" placeholder="What needs to be done?" autofocus required>
+    </form>
   </section>
   <script>
     var todosData = [ { id: 0, value : 'HTML', completed: true, date: '02-20'} ,
@@ -26,6 +29,7 @@
     var elem = document.querySelector('#input-todo');
     var ul = document.querySelector('#todo-list');
     var countP = document.querySelector('#count-complt');
+    var allComP = document.querySelector('#all-complt');
 
     var idValue = todosData.length;
 
@@ -45,16 +49,15 @@
     }
 
     function updateData() {
-      if (todosData) {
-        todosData.forEach(function (item) {
-          var dateShow = item.date.split('-');
-          var checked = (item.completed === true) ? 'checked' : '';
+      ul.innerHTML = '';
+      var todosData2 = todosData.forEach(function (item) {
+        var dateShow = item.date.split('-');
+        var checked = (item.completed === true) ? 'checked' : '';
 
-          ul.innerHTML += '<li id=' + item.id + '><input id="chk_' + item.id + '" class="chk_input" type="checkbox" ' + checked + '>' + item.value + '<span>' + dateShow[0] + '월 ' + dateShow[1] + '일' + '</span><i class="icon-cancel"></i></li>';
-        });
+        ul.innerHTML += '<li id=' + item.id + ' class='+ checked +'><input id="chk_' + item.id + '" class="chk_input" type="checkbox" ' + checked + '>' + item.value + '<span>' + dateShow[0] + '월 ' + dateShow[1] + '일' + '</span><i class="icon-cancel"></i></li>';
+      });
 
-        countP.innerHTML = '총 ' + completeCount() + '항목 완료';
-      }
+      countP.innerHTML = '총 ' + completeCount() + '항목 완료';
     }
 
     function deleteData(e) {
@@ -91,15 +94,22 @@
     }
 
     function completeAll() {
-      todosData.forEach(function (item) {
-        item.completed = true;
-      });
-    }
+      var trueVal = 0;
 
-    function completeAllNot() {
       todosData.forEach(function (item) {
-        item.completed = false;
+        (item.completed === true) ? trueVal++ : 0;
       });
+
+      if ( trueVal !== todosData.length ) {
+        todosData.map( function (item) {
+          item.completed = true;
+        });
+      } else{
+        todosData.map(function (item) {
+          item.completed = false;
+        });
+      }
+
     }
 
     function checkboxUpd(e) {
@@ -110,8 +120,9 @@
         if (item.id === chkId) item.completed = !item.completed
       });
 
-      countP.innerHTML = '총 ' + completeCount() + '항목 완료';
+      updateData();
     }
+
 
     window.addEventListener('load', function (e) {
       updateData();
@@ -127,6 +138,11 @@
 
     ul.addEventListener('change', function (e) {
       checkboxUpd(e);
+    });
+
+    allComP.addEventListener('click', function (e) {
+      completeAll();
+      updateData();
     });
 
   </script>

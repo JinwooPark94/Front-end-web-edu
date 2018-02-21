@@ -1,0 +1,94 @@
+@font-face {
+  font-family: 'fontello';
+  src: url('./font/fontello.eot?81336331');
+  src: url('./font/fontello.eot?81336331#iefix') format('embedded-opentype'),
+       url('./font/fontello.woff2?81336331') format('woff2'),
+       url('./font/fontello.woff?81336331') format('woff'),
+       url('./font/fontello.ttf?81336331') format('truetype'),
+       url('./font/fontello.svg?81336331#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+section {
+    padding: 40px;
+    margin: 20% 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+}
+
+section h1 {
+    font-size:2.5em;
+    margin: 10px 0;
+}
+
+section p {
+    font-size: 18px;
+    margin:0;
+}
+
+section div {
+    display:flex;
+    justify-content: space-between;
+}
+
+input {
+    width: 90%;
+    height: 60px;
+    font-size: 30px;
+    border: 1px solid #e0e0e0;
+    padding:0px 5%;
+    border-radius: 5px;
+}
+
+input:focus {
+    outline:none;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    text-align: left;
+    font-size: 25px;
+    list-style: none;
+    margin: 0;
+    padding:10px 0;
+    border-bottom :1px solid #e0e0e0;
+    position: relative;
+}
+
+li i::after{
+    content: '\e800';
+    font-style : initial;
+    font-family: 'fontello';
+    position:absolute;
+    right:0;
+    line-height:38px;
+    font-size:30px;
+    cursor: pointer;
+}
+
+li span {
+    float:right;
+    padding-right: 35px;
+    line-height:34px;
+    font-size:18px;
+    font-weight:bold;
+    letter-spacing: -1px;
+}
+.chk_input{
+    width:25px;
+    height:25px;
+    margin-right:20px;
+    vertical-align: middle;
+    margin-top:-2px;
+}
+

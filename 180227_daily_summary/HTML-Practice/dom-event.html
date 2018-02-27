@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <input type="text" name="a"> +
+    <input type="text" name="b"> =
+    <input type="text" name="result">
+  </div>
+  <input type="button" value="확인">
+  <script>
+    ( function (){
+      document.querySelector('input[type=button]').addEventListener('click', function(event) {
+        var a = document.querySelector('input[name=a]').value * 1;
+        var b = document.querySelector('input[name=b]').value * 1;
+        var result = document.querySelector('input[name=result]').value * 1;
+        ( a + b === result) ? alert('정답') : alert('실패');
+      });
+    }());
+  </script>
+</body>
+</html>

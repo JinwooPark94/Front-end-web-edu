@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .container{
+      position: absolute;
+      top:50%;
+      left:50%;
+      margin: 0 auto;
+      transform: translate(-50%, -50%);
+    }
+    .block-box{
+      width: 200px;
+      height: 200px;
+      background-color:red;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="block-box"></div>
+  </div>
+  <script>
+    (function (){
+      const blockBox = document.querySelector('.block-box');
+
+      blockBox.addEventListener('mouseover' , function(event){
+        this.style.backgroundColor = 'black';
+      });
+
+      blockBox.addEventListener('mouseout', function (event) {
+        this.style.backgroundColor = 'red';
+      });
+
+    }());
+  </script>
+</body>
+</html>

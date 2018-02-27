@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Slide image</title>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class=container>
+    <div class="row">
+      <h2>1. 버튼 클릭시 슬라이드</h2>
+      <h2>2. 3초마다 이미지 슬라이드 시작/중지</h2>
+      <img id="img-1" src="http://placehold.it/350x250/abc?text=img1" alt="">
+      <img id="img-2" src="http://placehold.it/350x250/bca?text=img2" alt="">
+      <img id="img-3" src="http://placehold.it/350x250/cba?text=img3" alt="">
+      <div style="margin-top: 10px;">
+        <button class="btn btn-success" id="btn">slide image</button>
+        <button class="btn btn-success" id="toggle">toggle start/stop sliding</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const imgElemArr = [
+        document.getElementById('img-1'),
+        document.getElementById('img-2'),
+        document.getElementById('img-3')
+      ];
+
+      const imgSrcArr = imgElemArr.map(el => el.getAttribute('src'));
+
+      document.getElementById('btn').addEventListener('click', () => {
+
+        imgSrcArr.push(imgSrcArr.shift());
+
+        imgElemArr.map((el, i) => el.setAttribute('src', imgSrcArr[i]));
+      });
+
+      let intervalID = null;
+      let isPaused = true;
+
+      document.getElementById('toggle').addEventListener('click', () => {
+        if (isPaused) {
+          intervalID = setInterval(() => {
+
+            imgSrcArr.push(imgSrcArr.shift());
+
+            imgElemArr.map((el, i) => el.setAttribute('src', imgSrcArr[i]));
+          }, 2000);
+        } else {
+          clearInterval(intervalID);
+        }
+        isPaused = !isPaused;
+      });
+    }());
+  </script>
+</body>
+
+</html>

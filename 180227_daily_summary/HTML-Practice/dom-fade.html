@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .container {
+      width: 700px;
+      height: 200px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+    }
+
+    .box {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>fade-in, fade-out effect with JavaScript</h2>
+
+    <button id="fadein">fade in</button>
+    <button id="fadeout">fade out</button>
+    <div class="box"></div>
+  </div>
+
+  <script>
+    (function () {
+      var box = document.querySelector('.box');
+
+      function fadeIn(elem) {
+        elem.style.opacity = 0;
+        elem.style.display = 'block';
+
+        (function fade() {
+          var opacity = elem.style.opacity * 1;
+          if (opacity < 1) {
+            elem.style.opacity = opacity += 0.01;
+            // requestAnimationFrame: https://msdn.microsoft.com/ko-kr/library/hh920765(v=vs.85).aspx
+            requestAnimationFrame(fade);
+          }
+        }());
+      }
+
+      function fadeOut(elem) {
+        elem.style.opacity = 1;
+
+        (function fade() {
+          var opacity = elem.style.opacity * 1;
+          if (opacity > 0) {
+            elem.style.opacity = opacity -= 0.01;
+            // requestAnimationFrame: https://msdn.microsoft.com/ko-kr/library/hh920765(v=vs.85).aspx
+            requestAnimationFrame(fade);
+          }
+        }());
+      }
+
+      document.getElementById('fadein').addEventListener('click', function () {
+        fadeIn(box);
+      });
+
+      document.getElementById('fadeout').addEventListener('click', function () {
+        fadeOut(box);
+      });
+    }());
+  </script>
+</body>
+
+</html>

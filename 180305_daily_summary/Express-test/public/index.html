@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" name="username">
+  <input type="password" name="password">
+  <button class="login">Login</button>
+  <script>
+
+    document.querySelector('.login').addEventListener('click', function(){
+      const username = document.querySelector('input[name=username]').value;
+      const password = document.querySelector('input[name=password]').value;
+
+      const payload = { username, password };
+
+      console.log(payload);
+
+      const xhr = new XMLHttpRequest();
+      xhr.open('POST', '/signin');
+      xhr.setRequestHeader('Content-Type', 'application/json');
+      xhr.send(JSON.stringify(payload));
+
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+          // status는 response 상태 코드를 반환 : 200 => 정상 응답
+          if (xhr.status === 200) {
+            console.log(xhr.responseText);
+          } else {
+            console.log("Error!");
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

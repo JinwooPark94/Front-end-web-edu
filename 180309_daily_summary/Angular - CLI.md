@@ -65,3 +65,19 @@ $ ng serve
 `--open` : 자동으로 브라우저 실행 (`-o`)
 
 `--port` : 포트번호 변경 (`-p`)
+
+## 5. 프로젝트 구성 요소 추가
+
+`ng generate` 명령어를 사용하여 프로젝트 구성 요소를 추가
+
+| 추가 대상 구성요소 | 명령어                                  | 축약형                   |
+| ---------- | ------------------------------------ | --------------------- |
+| 컴포넌트       | ng generate component component-name | ng g c component-name |
+| 디렉티브       | ng generate directive directive-name | ng g d directive-name |
+| 파이프        | ng generate pipe pipe-name           | ng g p pipe-name      |
+| 서비스        | ng generate service service-name     | ng g s service-name   |
+| 모듈         | ng generate module module-name       | ng g m module-name    |
+| 가드         | ng generate guard guard-name         | ng g g guard-name     |
+| 클래스        | ng generate class class-name         | ng g cl class-name    |
+| 인터페이스      | ng generate interface interface-name | ng g i interface-name |
+| Enum       | ng generate enum enum-name           | ng g e enum-name      |

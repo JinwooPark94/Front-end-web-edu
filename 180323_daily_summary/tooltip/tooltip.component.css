@@ -1,0 +1,20 @@
+.container {
+  margin: 20% auto;
+}
+
+.tooltip-button {
+  position: relative;
+  white-space: pre-wrap !important;
+}
+
+.tooltip-button > span{
+  position: absolute;
+  padding:20px 20px;
+  background: black;
+  color:white;
+  max-width:400px;
+}
+
+.ng-tooltip-show {
+  opacity: 1;
+}
